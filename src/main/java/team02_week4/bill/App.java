@@ -11,5 +11,6 @@ public class App
         System.out.println( "Hello World!" );
         System.out.println("Yoon-jae");
         System.out.println("Sumin");
+        System.out.println("GeunYoung");
     }
 }
