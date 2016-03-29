@@ -12,6 +12,6 @@ public class App
         System.out.println("Yoon-jae");
         System.out.println("Sumin");
         System.out.println("GeunYoung");
-	System.out.println("Second");
+        System.out.println("Second");
     }
 }
