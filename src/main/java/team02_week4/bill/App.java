@@ -13,5 +13,6 @@ public class App
         System.out.println("Sumin");
         System.out.println("GeunYoung");
         System.out.println("Up to date");
+        System.out.println("Second");
     }
 }
