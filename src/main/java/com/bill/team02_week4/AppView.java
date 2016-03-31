@@ -1,11 +1,11 @@
-package team02_week4.bill;
+package com.bill.team02_week4;
 import java.io.*;
 
 public class AppView {
 	
-	public AppView() throws Exception{
+	private static final int NUMBER_OF_SPLIT_CYCLES = 3;
+	public AppView() throws Exception {
 		scanFile("input.txt");
-		
 	}
 	
 	@SuppressWarnings("null")
@@ -27,13 +27,15 @@ public class AppView {
 		String[] tmpLine;
 		String[][] lineData = null;
 		
-		for(int i=0; i<header.length; i++)
+		for(int i=0; i<header.length; i++) {
 			lineData[0][i] = header[i];
+		}
 		
 		while((line = reader.readLine()) != null){
 			tmpLine = line.split(" ");
-			for(int i = 0; i<3; i++)
-				lineData[cnt][i] = tmpLine[i];		
+			for(int i = 0; i < NUMBER_OF_SPLIT_CYCLES; i++) {
+				lineData[cnt][i] = tmpLine[i];
+			}
 		}
 	}	
 }

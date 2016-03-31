@@ -1,4 +1,4 @@
-package team02_week4.bill;
+package com.bill.team02_week4;
 
 public class Plan {
 	
@@ -7,19 +7,19 @@ public class Plan {
 	private double additionalLineRate;
 	private double ratePerExcessMinute;
 	
-	public double getBasicRate(){
+	public double getBasicRate() {
 		return basicRate;
 	}
 	
-	public int getBasicMinute(){
+	public int getBasicMinute() {
 		return basicMinute;
 	}
 	
-	public double getAdditionalLineRate(){
+	public double getAdditionalLineRate() {
 		return additionalLineRate;
 	}
 
-	public double getRatePerExcessMinute(){
+	public double getRatePerExcessMinute() {
 		return ratePerExcessMinute;
 	}
 }
