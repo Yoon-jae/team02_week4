@@ -3,29 +3,18 @@ package com.bill.team02.week4;
 public class Line {
 	
 	private int usedMinutes;
-	private String phoneNumber;
 	private String lineUserName;
 	
-	public Line(){
-		
+	public Line(String lineUserName){
+		this.lineUserName = lineUserName;
 	}
 	
-	public Line(int usedMinutes, String phoneNumber, String lineUserName){
+	public void setUsedMinutes(int usedMinutes){
 		this.usedMinutes = usedMinutes;
-		this.phoneNumber = phoneNumber;
-		this.lineUserName = lineUserName;
 	}
 	
 	public int getUsedMinutes(){	
 		return usedMinutes; 
-	}
-	
-	public String getPhoneNumber(){
-		return phoneNumber;
-	}
-	
-	public void setPhoneNumber(String phoneNumber){
-		this.phoneNumber = phoneNumber;
 	}
 	
 	public String getLineUserName(){
