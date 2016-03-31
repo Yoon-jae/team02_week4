@@ -63,7 +63,7 @@ public class AppView {
 						String lineUserName = token.sval;
 						accountData[accountDataIndex++] = lineUserName;
 						token.nextToken();
-						String usedMinute = token.sval;
+						String usedMinute = ""+token.nval;
 						accountData[accountDataIndex++] = usedMinute;
 						System.out.printf("UserName : %s || UsedMinute : %s\n",lineUserName,usedMinute);
 					}

@@ -2,18 +2,18 @@ package com.bill.team02.week4;
 
 public class Line {
 	
-	private int usedMinutes;
+	private double usedMinutes;
 	private String lineUserName;
 	
 	public Line(String lineUserName){
 		this.lineUserName = lineUserName;
 	}
 	
-	public void setUsedMinutes(int usedMinutes){
+	public void setUsedMinutes(double usedMinutes){
 		this.usedMinutes = usedMinutes;
 	}
 	
-	public int getUsedMinutes(){	
+	public double getUsedMinutes(){	
 		return usedMinutes; 
 	}
 	

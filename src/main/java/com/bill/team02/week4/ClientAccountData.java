@@ -11,18 +11,19 @@ public class ClientAccountData {
 		this.checkAndSetPlan(accountData[accountData.length-1]);
 		arrayLine = new Line[Integer.parseInt(accountData[accountData.length-2])];
 		for(int i=0; i<accountData.length-2; i++){
-			if(i%2==0){
-				arrayLine[i/2] = new Line(accountData[i]);
+			int newIndex = i/2;
+			if(i%2 == 0) {
+				arrayLine[newIndex] = new Line(accountData[i]);
 			}
-			else{
-				arrayLine[i/2].setUsedMinutes(Integer.parseInt(accountData[i]));
+			else {
+				arrayLine[newIndex].setUsedMinutes(Double.parseDouble(accountData[i]));
 			}
 		}
 	}
 	
 	public double calculateRate(){
 		double basicMonthlyRate = RateCalculation.getBasicMonthlyRate(plan);
-		double additionalLineRate = RateCalculation.getAdditionaLineRate(plan, arrayLine.length);
+		double additionalLineRate = RateCalculation.getAdditionalLineRate(plan, arrayLine.length);
 		double additionalMinuteRate = RateCalculation.getAdditionalMinuteRate(plan, arrayLine);
 		return RateCalculation.getTotalRate(basicMonthlyRate, additionalLineRate, additionalMinuteRate);
 	}

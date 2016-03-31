@@ -10,7 +10,7 @@ public class RateCalculation {
 		if (aNumberOfLine < 3) {
 			return plan.getAdditionalLineRate() * (aNumberOfLine - 1);
 		} else {
-			return (plan.getAdditionalLineRate() * 2) + ((aNumberOfLine - 2) * 5);
+			return (plan.getAdditionalLineRate() * 2) + ((aNumberOfLine - 3) * 5);
 		}
 	}
 
@@ -29,6 +29,7 @@ public class RateCalculation {
 
 	public static double getTotalRate(double basicMonthlyRate, double additionalLineRate,
 			double additionalMinuterRate) {
+		System.out.printf("basicMonthlyRate : " + basicMonthlyRate  + "\nadditionalLineRate : " + additionalLineRate + "\nadditionalMinuterRate : " + additionalMinuterRate + "\n");
 		return basicMonthlyRate + additionalLineRate + additionalMinuterRate;
 	}
 
