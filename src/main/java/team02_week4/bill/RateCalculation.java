@@ -1,22 +1,22 @@
 package team02_week4.bill;
-public static class RateCalculation {
+public class RateCalculation {
 
-	public static getBasicMonthlyRate(Plan aPlan)
+	public static void getBasicMonthlyRate(Plan aPlan)
 	{
 		
 	}
 	
-	public static getAdditionaLineRate(Plan aPlan, Line aLine)
+	public static void getAdditionaLineRate(Plan aPlan, Line aLine)
 	{
 		
 	}
 	
-	public static getAdditionalMinuteRate(Plan aPlan, Line aLine)
+	public static void getAdditionalMinuteRate(Plan aPlan, Line aLine)
 	{
 		
 	}
 	
-	public static getTotalRate(double a, double b, double c)
+	public static void getTotalRate(double a, double b, double c)
 	{
 		
 	}
