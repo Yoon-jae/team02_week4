@@ -4,8 +4,12 @@ import java.io.*;
 public class AppView {
 	
 	private static final int NUMBER_OF_SPLIT_CYCLES = 3;
-	public AppView() throws Exception {
-		scanFile("input.txt");
+	public AppView() {
+		try {
+			scanFile("input.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@SuppressWarnings("null")
