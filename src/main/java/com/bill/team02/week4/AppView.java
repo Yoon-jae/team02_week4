@@ -10,7 +10,7 @@ public class AppView {
 		
 	}
 
-	public String[] scanFile() throws IOException{
+	public String[] scanFile() throws IOException {
 //		File inputFile = new File(fileName);
 //		@SuppressWarnings("resource")
 //		BufferedReader reader = new BufferedReader(new FileReader(inputFile));
@@ -41,21 +41,23 @@ public class AppView {
 		
 		String[] accountData = new String[MAX_DATA_SIZE];
 		int accountDataIndex = 0;
-		
+		String planName = null;
 		while((token.nextToken() != StreamTokenizer.TT_EOF)){
 			switch(token.ttype) {
 				case StreamTokenizer.TT_NUMBER:
-					if(token.lineno() == 2)	{ // 파일의 첫 번째 줄. 정점의수 
-						accountData = new String[((int)token.nval + 1) * 2];
-						System.out.printf("numOfLine : %d\n",(int)token.nval);
+					if(token.lineno() == 2)	{ 
+						int numOfLine = (int)token.nval;
+						accountData = new String[(numOfLine + 1) * 2];
+						accountData[accountData.length-1] = planName;
+						accountData[accountData.length-2] = String.valueOf(numOfLine);
+						System.out.printf("planName : %s\n",accountData[accountData.length-1]);
+						System.out.printf("numOfLine : %s\n",accountData[accountData.length-2]);
 					}
 					break;
 					
 				case StreamTokenizer.TT_WORD:
 					if(token.lineno() == 1) {
-						String planName = token.sval;
-						accountData[accountData.length-1] = planName;
-						System.out.printf("accountData[%d] : %s\n",accountData.length-1,planName);
+						planName = token.sval;
 					}
 					else {
 						String lineUserName = token.sval;
@@ -67,6 +69,11 @@ public class AppView {
 					}
 					break;
 			}
+		}
+		
+		for(int i=0; i<accountDataIndex; i++) {
+			System.out.printf("accountData[%d] : %s\n",i,accountData[i]);
+			
 		}
 		stream.close();
 		return accountData;
