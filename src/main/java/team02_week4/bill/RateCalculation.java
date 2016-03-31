@@ -1,5 +1,4 @@
 package team02_week4.bill;
+public class RateCalculation{
 
-public class RateCalculation {
-	
 }
