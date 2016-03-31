@@ -19,5 +19,7 @@ public class AppController {
 			e.printStackTrace();
 		}
 		formController = new FormController(accountData);
+		System.out.println(formController);
 	}
+
 }
