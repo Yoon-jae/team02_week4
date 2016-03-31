@@ -11,9 +11,4 @@ public class Main
         AppController appController = new AppController();
         appController.run();
     }
-    
-    public void run()
-    {
-    	
-    }
 }
