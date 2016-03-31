@@ -6,6 +6,10 @@ public class Line {
 	private String phoneNumber;
 	private String lineUserName;
 	
+	public Line(){
+		
+	}
+	
 	public Line(int usedMinutes, String phoneNumber, String lineUserName){
 		this.usedMinutes = usedMinutes;
 		this.phoneNumber = phoneNumber;
