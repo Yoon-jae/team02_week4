@@ -11,5 +11,12 @@ public class ClientAccountData {
 		
 	}
 	
+	public double calculateRate(){
+		double basicMonthlyRate = RateCalculation.getBasicMonthlyRate(plan);
+		double additionalLineRate = RateCalculation.getAdditionaLineRate(plan, line.length);
+		double additionalMinuteRate = RateCalculation.getAdditionalMinuteRate(plan, line);
+		return RateCalculation.getTotalRate(basicMonthlyRate, additionalLineRate, additionalMinuteRate);
+	}
+	
 
 }
