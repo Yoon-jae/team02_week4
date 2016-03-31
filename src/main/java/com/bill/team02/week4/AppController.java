@@ -8,15 +8,16 @@ public class AppController {
 	private FormController formController;
 	
 	public AppController() {
-		this.appView = new AppView();
-		this.formController = new FormController();
+		this.appView = new AppView("input.txt");
 	}
 	
 	public void run() {
-        try {
-			this.appView.scanFile("input.txt");
+        String[] accountData;
+		try {
+			accountData = this.appView.scanFile();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}	
+		}
+		formController = new FormController(accountData);
 	}
 }
