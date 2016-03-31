@@ -9,8 +9,9 @@ public class RateCalculation {
 	public static double getAdditionaLineRate(Plan aPlan, int aNumberOfLine) {
 		if (aNumberOfLine < 3) {
 			return aPlan.getAdditionalLineRate() * (aNumberOfLine - 1);
-		} else
+		} else {
 			return (aPlan.getAdditionalLineRate() * 2) + ((aNumberOfLine - 2) * 5);
+		}
 	}
 
 	public static double getAdditionalMinuteRate(Plan aPlan, Line aLine) {
