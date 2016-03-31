@@ -7,14 +7,10 @@ public class AppView {
 	private static final int MAX_DATA_SIZE = 1000;
 	
 	public AppView() {
-		try {
-			scanFile("input.txt");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
 	}
 
-	public String[] scanFile(String fileName) throws IOException{
+	public String[] scanFile() throws IOException{
 //		File inputFile = new File(fileName);
 //		@SuppressWarnings("resource")
 //		BufferedReader reader = new BufferedReader(new FileReader(inputFile));
@@ -39,7 +35,7 @@ public class AppView {
 //			}
 //		}
 		
-		FileInputStream stream = new FileInputStream("input_AOVNetwork");
+		FileInputStream stream = new FileInputStream("input.txt");
 		InputStreamReader reader = new InputStreamReader(stream);
 		StreamTokenizer token = new StreamTokenizer(reader);
 		

@@ -12,7 +12,7 @@ public class AppController {
 	}
 	
 	public void run() {
-        String[] accountData;
+        String[] accountData = null;
 		try {
 			accountData = this.appView.scanFile();
 		} catch (IOException e) {
