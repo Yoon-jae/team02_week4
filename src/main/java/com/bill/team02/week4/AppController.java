@@ -1,5 +1,7 @@
 package com.bill.team02.week4;
 
+import java.io.IOException;
+
 public class AppController {
 
 	private AppView appView;
@@ -11,6 +13,10 @@ public class AppController {
 	}
 	
 	public void run() {
-        ;		
+        try {
+			this.appView.scanFile("input.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
 	}
 }

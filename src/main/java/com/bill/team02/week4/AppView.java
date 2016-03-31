@@ -13,7 +13,7 @@ public class AppView {
 	}
 	
 	@SuppressWarnings("null")
-	private void scanFile(String fileName) throws IOException{
+	public void scanFile(String fileName) throws IOException{
 		File inputFile = new File(fileName);
 		@SuppressWarnings("resource")
 		BufferedReader reader = new BufferedReader(new FileReader(inputFile));
