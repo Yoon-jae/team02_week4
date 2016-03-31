@@ -8,7 +8,7 @@ public class AppController {
 	private FormController formController;
 	
 	public AppController() {
-		this.appView = new AppView("input.txt");
+		this.appView = new AppView();
 	}
 	
 	public void run() {
