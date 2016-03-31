@@ -9,6 +9,6 @@ public class FormController {
 	}
 	
 	public String toString(){
-		return "Your total account rate is $" + clientAccountData. + ".";
+		return "Your total account rate is $" + clientAccountData.calculateRate() + ".";
 	}
 }
