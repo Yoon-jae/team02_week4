@@ -7,6 +7,7 @@ public class AppView {
 		scanFile("input.txt");
 		
 	}
+	
 	@SuppressWarnings("null")
 	private void scanFile(String fileName) throws IOException{
 		File inputFile = new File(fileName);

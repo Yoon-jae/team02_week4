@@ -5,7 +5,7 @@ public class AppController {
 	private AppView appView;
 	private FormController formController;
 	
-	public AppController() {
+	public AppController() throws Exception {
 		this.appView = new AppView();
 		this.formController = new FormController();
 	}

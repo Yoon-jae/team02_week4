@@ -6,7 +6,7 @@ package team02_week4.bill;
  */
 public class Main 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws Exception
     {
         AppController appController = new AppController();
         appController.run();
