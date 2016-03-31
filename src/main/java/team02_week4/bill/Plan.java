@@ -8,7 +8,18 @@ public class Plan {
 	private double ratePerExcessMinute;
 	
 	public double getBasicRate(){
-		return 0;
+		return basicRate;
+	}
+	
+	public int getBasicMinute(){
+		return basicMinute;
+	}
+	
+	public double getAdditionalLineRate(){
+		return additionalLineRate;
 	}
 
+	public double getRatePerExcessMinute(){
+		return ratePerExcessMinute;
+	}
 }
