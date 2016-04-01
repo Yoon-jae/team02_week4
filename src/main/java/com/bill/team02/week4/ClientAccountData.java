@@ -1,12 +1,14 @@
 package com.bill.team02.week4;
 
+import java.util.logging.Logger;
+
 public class ClientAccountData {
 
 	private Plan plan;
 	private Line[] arrayLine;
 	private String hostName;
 	private String emailAddress;
-
+	
 	private static final int NUMBER_OF_LINE_INDEX_ZERO = 0;
 	private static final int NUMBER_OF_LINE_INDEX_ONE = 1;
 	private static final int NUMBER_OF_LINE_INDEX_TWO = 2;

@@ -1,6 +1,13 @@
 package com.bill.team02.week4;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+import java.util.logging.StreamHandler;
+
 public class RateCalculation {
+	
+	private static Logger logger = Logger.getLogger("My Logger");
 
 	private static final int RATE_OF_FAMILIY_DISCOUNT = 5;
 	private static final int NUMBER_OF_APPLIED_DISCOUNT_USER = 3;
@@ -40,8 +47,11 @@ public class RateCalculation {
 
 	public static double getTotalRate(double basicMonthlyRate, double additionalLineRate,
 			double additionalMinuterRate) {
-		System.out.printf("basicMonthlyRate : " + basicMonthlyRate + "\nadditionalLineRate : " + additionalLineRate
+		logger.setUseParentHandlers(false);
+		logger.addHandler(new StreamHandler(System.err, new SimpleFormatter()));
+		logger.log(Level.INFO, "basicMonthlyRate : " + basicMonthlyRate + "\nadditionalLineRate : " + additionalLineRate
 				+ "\nadditionalMinuterRate : " + additionalMinuterRate + "\n");
+		
 		return basicMonthlyRate + additionalLineRate + additionalMinuterRate;
 	}
 
