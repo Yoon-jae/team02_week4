@@ -9,9 +9,9 @@ public class RateCalculation {
 	private static final int BORDER_OF_FAMILIY_DISCOUNT = 3;
 
 	private RateCalculation() {
-		
+
 	}
-	
+
 	public static double getBasicMonthlyRate(Plan plan) {
 		return plan.getBasicRate();
 	}
@@ -20,7 +20,8 @@ public class RateCalculation {
 		if (aNumberOfLine < BORDER_OF_FAMILIY_DISCOUNT) {
 			return plan.getAdditionalLineRate() * (aNumberOfLine - THE_MAIN_USER);
 		} else {
-			return (plan.getAdditionalLineRate() * NUMBER_OF_NOT_APPLIED_DISCOUNT_USER) + ((aNumberOfLine - NUMBER_OF_APPLIED_DISCOUNT_USER) * RATE_OF_FAMILIY_DISCOUNT);
+			return (plan.getAdditionalLineRate() * NUMBER_OF_NOT_APPLIED_DISCOUNT_USER)
+					+ ((aNumberOfLine - NUMBER_OF_APPLIED_DISCOUNT_USER) * RATE_OF_FAMILIY_DISCOUNT);
 		}
 	}
 
@@ -39,7 +40,8 @@ public class RateCalculation {
 
 	public static double getTotalRate(double basicMonthlyRate, double additionalLineRate,
 			double additionalMinuterRate) {
-		System.out.printf("basicMonthlyRate : " + basicMonthlyRate  + "\nadditionalLineRate : " + additionalLineRate + "\nadditionalMinuterRate : " + additionalMinuterRate + "\n");
+		System.out.printf("basicMonthlyRate : " + basicMonthlyRate + "\nadditionalLineRate : " + additionalLineRate
+				+ "\nadditionalMinuterRate : " + additionalMinuterRate + "\n");
 		return basicMonthlyRate + additionalLineRate + additionalMinuterRate;
 	}
 
