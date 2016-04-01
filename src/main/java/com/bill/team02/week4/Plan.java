@@ -1,30 +1,10 @@
 package com.bill.team02.week4;
 
-public class Plan {
-	
-	private double basicRate;
-	private int basicMinute;
-	private double additionalLineRate;
-	private double ratePerExcessMinute;
-	private String planName;
-	
-	public double getBasicRate() {
-		return basicRate;
-	}
-	
-	public int getBasicMinute() {
-		return basicMinute;
-	}
-	
-	public double getAdditionalLineRate() {
-		return additionalLineRate;
-	}
+public abstract class Plan {
 
-	public double getRatePerExcessMinute() {
-		return ratePerExcessMinute;
-	}
-	
-	public String getPlanName(){
-		return planName;
-	}
+    public abstract double getBasicRate();
+    public abstract int getBasicMinute();
+    public abstract double getAdditionalLineRate();
+    public abstract double getRatePerExcessMinute();
+    public abstract String getPlanName();
 }
