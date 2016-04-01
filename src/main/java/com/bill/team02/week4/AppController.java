@@ -19,7 +19,6 @@ public class AppController {
             throw new IllegalArgumentException("No such plan");
         }
         formController = new FormController(accountData);
-        System.out.println(formController);
+        formController.printClientBill();;
     }
-
 }

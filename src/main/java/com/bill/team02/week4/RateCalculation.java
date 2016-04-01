@@ -2,47 +2,44 @@ package com.bill.team02.week4;
 
 public class RateCalculation {
 
-    private static final int RATE_OF_FAMILIY_DISCOUNT = 5;
-    private static final int NUMBER_OF_APPLIED_DISCOUNT_USER = 3;
-    private static final int NUMBER_OF_NOT_APPLIED_DISCOUNT_USER = 2;
-    private static final int THE_MAIN_USER = 1;
-    private static final int BORDER_OF_FAMILIY_DISCOUNT = 3;
+	private static final int RATE_OF_FAMILIY_DISCOUNT = 5;
+	private static final int NUMBER_OF_APPLIED_DISCOUNT_USER = 3;
+	private static final int NUMBER_OF_NOT_APPLIED_DISCOUNT_USER = 2;
+	private static final int THE_MAIN_USER = 1;
+	private static final int BORDER_OF_FAMILIY_DISCOUNT = 3;
 
-    private RateCalculation() {
+	private RateCalculation() {
+		
+	}
+	
+	public static double getBasicMonthlyRate(Plan plan) {
+		return plan.getBasicRate();
+	}
 
-    }
+	public static double getAdditionalLineRate(Plan plan, int aNumberOfLine) {
+		if (aNumberOfLine < BORDER_OF_FAMILIY_DISCOUNT) {
+			return plan.getAdditionalLineRate() * (aNumberOfLine - THE_MAIN_USER);
+		} else {
+			return (plan.getAdditionalLineRate() * NUMBER_OF_NOT_APPLIED_DISCOUNT_USER) + ((aNumberOfLine - NUMBER_OF_APPLIED_DISCOUNT_USER) * RATE_OF_FAMILIY_DISCOUNT);
+		}
+	}
 
-    public static double getBasicMonthlyRate(Plan plan) {
-        return plan.getBasicRate();
-    }
+	public static double getAdditionalMinuteRate(Plan plan, Line[] arrayLine) {
+		int sumOfMinutes = 0;
 
-    public static double getAdditionalLineRate(Plan plan, int aNumberOfLine) {
-        if (aNumberOfLine < BORDER_OF_FAMILIY_DISCOUNT) {
-            return plan.getAdditionalLineRate() * (aNumberOfLine - THE_MAIN_USER);
-        } else {
-            return (plan.getAdditionalLineRate() * NUMBER_OF_NOT_APPLIED_DISCOUNT_USER)
-                    + ((aNumberOfLine - NUMBER_OF_APPLIED_DISCOUNT_USER) * RATE_OF_FAMILIY_DISCOUNT);
-        }
-    }
+		for (int i = 0; i < arrayLine.length; i++) {
+			sumOfMinutes += arrayLine[i].getUsedMinutes();
+		}
+		if (sumOfMinutes < plan.getBasicMinute()) {
+			return 0;
+		} else {
+			return plan.getRatePerExcessMinute() * (sumOfMinutes - plan.getBasicMinute());
+		}
+	}
 
-    public static double getAdditionalMinuteRate(Plan plan, Line[] arrayLine) {
-        int sumOfMinutes = 0;
-
-        for (int i = 0; i < arrayLine.length; i++) {
-            sumOfMinutes += arrayLine[i].getUsedMinutes();
-        }
-        if (sumOfMinutes < plan.getBasicMinute()) {
-            return 0;
-        } else {
-            return plan.getRatePerExcessMinute() * (sumOfMinutes - plan.getBasicMinute());
-        }
-    }
-
-    public static double getTotalRate(double basicMonthlyRate, double additionalLineRate,
-            double additionalMinuterRate) {
-        System.out.printf("basicMonthlyRate : " + basicMonthlyRate + "\nadditionalLineRate : " + additionalLineRate
-                + "\nadditionalMinuterRate : " + additionalMinuterRate + "\n");
-        return basicMonthlyRate + additionalLineRate + additionalMinuterRate;
-    }
+	public static double getTotalRate(double basicMonthlyRate, double additionalLineRate,
+			double additionalMinuterRate) {
+		return basicMonthlyRate + additionalLineRate + additionalMinuterRate;
+	}
 
 }
