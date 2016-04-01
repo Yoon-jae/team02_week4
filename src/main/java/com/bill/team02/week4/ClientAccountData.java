@@ -1,7 +1,5 @@
 package com.bill.team02.week4;
 
-import java.util.logging.Logger;
-
 public class ClientAccountData {
 
 	private Plan plan;
