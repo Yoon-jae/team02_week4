@@ -19,7 +19,7 @@ public class AppController {
 			System.out.println("There is no input file.");
 		}
 		formController = new FormController(accountData);
-		System.out.println(formController);
+		formController.printClientBill();;
 	}
 
 }

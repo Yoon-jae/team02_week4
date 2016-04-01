@@ -6,6 +6,7 @@ public class Silver extends Plan {
 	private static final int BASIC_MINUTE = 500;
 	private static final double ADDITIONAL_LINE_RATE = 21.50;
 	private static final double RATE_PER_EXCESS_MINUTE = 0.54;
+	private static final String PLAN_NAME = "Silver";
 	
 	public double getBasicRate() {
 		return BASIC_RATE;
@@ -21,5 +22,9 @@ public class Silver extends Plan {
 
 	public double getRatePerExcessMinute() {
 		return RATE_PER_EXCESS_MINUTE;
+	}
+	
+	public String getPlanName(){
+		return PLAN_NAME;
 	}
 }

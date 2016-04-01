@@ -46,6 +46,10 @@ public class ClientAccountData{
 		double additionalMinuteRate = RateCalculation.getAdditionalMinuteRate(plan, arrayLine);
 		return RateCalculation.getTotalRate(basicMonthlyRate, additionalLineRate, additionalMinuteRate);
 	}
+	
+	public Plan getPlan(){
+		return plan;
+	}
 
 	private void checkAndSetPlan(String plan){
 		if("Gold".equals(plan)){

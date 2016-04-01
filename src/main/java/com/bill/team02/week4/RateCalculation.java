@@ -39,7 +39,6 @@ public class RateCalculation {
 
 	public static double getTotalRate(double basicMonthlyRate, double additionalLineRate,
 			double additionalMinuterRate) {
-		System.out.printf("basicMonthlyRate : " + basicMonthlyRate  + "\nadditionalLineRate : " + additionalLineRate + "\nadditionalMinuterRate : " + additionalMinuterRate + "\n");
 		return basicMonthlyRate + additionalLineRate + additionalMinuterRate;
 	}
 

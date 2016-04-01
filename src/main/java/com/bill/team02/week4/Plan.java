@@ -6,6 +6,7 @@ public class Plan {
 	private int basicMinute;
 	private double additionalLineRate;
 	private double ratePerExcessMinute;
+	private String planName;
 	
 	public double getBasicRate() {
 		return basicRate;
@@ -21,5 +22,9 @@ public class Plan {
 
 	public double getRatePerExcessMinute() {
 		return ratePerExcessMinute;
+	}
+	
+	public String getPlanName(){
+		return planName;
 	}
 }
