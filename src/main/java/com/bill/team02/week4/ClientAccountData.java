@@ -7,9 +7,9 @@ public class ClientAccountData{
 	private String hostName;
 	private String emailAddress;
 
-	private final int zero = 0;
-	private final int one = 1;
-	private final int two = 2;
+	private final static int zero = 0;
+	private final static int one = 1;
+	private final static int two = 2;
 
 	public String getHostName(){
 		return hostName;
