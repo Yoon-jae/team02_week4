@@ -6,10 +6,10 @@ public class ClientAccountData {
 	private Line[] arrayLine;
 	private String hostName;
 	private String emailAddress;
-
-	private final int zero = 0;
-	private final int one = 1;
-	private final int two = 2;
+	
+	private static final int NUMBEROFLINEINDEXZERO = 0;
+	private static final int NUMBEROFLINEINDEXONE = 1;
+	private static final int NUMBEROFLINEINDEXTWO = 2;
 
 	public ClientAccountData(String[] accountData) {
 		this.checkAndSetPlan(accountData[accountData.length - one]);
@@ -40,7 +40,20 @@ public class ClientAccountData {
 		this.emailAddress = emailAddress;
 	}
 
-	public double calculateRate() {
+	public ClientAccountData(String[] accountData){
+		this.checkAndSetPlan(accountData[accountData.length-NUMBEROFLINEINDEXONE]);
+		arrayLine = new Line[Integer.parseInt(accountData[accountData.length-NUMBEROFLINEINDEXTWO])];
+		for(int i=0; i<accountData.length-NUMBEROFLINEINDEXTWO; i++){
+			int newIndex = i/NUMBEROFLINEINDEXTWO;
+			if(i%NUMBEROFLINEINDEXTWO == NUMBEROFLINEINDEXZERO) {
+				arrayLine[newIndex] = new Line(accountData[i]);
+			} else {
+				arrayLine[newIndex].setUsedMinutes(Double.parseDouble(accountData[i]));
+			}
+		}
+	}
+
+	public double calculateRate(){
 		double basicMonthlyRate = RateCalculation.getBasicMonthlyRate(plan);
 		double additionalLineRate = RateCalculation.getAdditionalLineRate(plan, arrayLine.length);
 		double additionalMinuteRate = RateCalculation.getAdditionalMinuteRate(plan, arrayLine);
@@ -53,7 +66,7 @@ public class ClientAccountData {
 		} else if ("Silver".equals(plan)) {
 			this.plan = new Silver();
 		} else {
-			System.err.println("There isn't such plan");
+			throw new IllegalArgumentException("No such plan"); 
 		}
 	}
 
