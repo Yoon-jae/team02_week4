@@ -6,10 +6,10 @@ public class ClientAccountData{
 	private Line[] arrayLine;
 	private String hostName;
 	private String emailAddress;
-
-	private final static int zero = 0;
-	private final static int one = 1;
-	private final static int two = 2;
+	
+	private static final int NUMBEROFLINEINDEXZERO = 0;
+	private static final int NUMBEROFLINEINDEXONE = 1;
+	private static final int NUMBEROFLINEINDEXTWO = 2;
 
 	public ClientAccountData(String[] accountData){
 		this.checkAndSetPlan(accountData[accountData.length-one]);
@@ -51,9 +51,10 @@ public class ClientAccountData{
 		if("Gold".equals(plan)){
 			this.plan = new Gold();
 		} else if("Silver".equals(plan)){
-			this.plan = new Silver();
 		} else{
-			System.err.println("There isn't such plan");
+			this.plan = new Silver();
+			throw new IllegalArgumentException("No such plan"); 
+			//logger.log(Level.SEVERE, null, ex);
 		}
 	}
 
