@@ -45,7 +45,6 @@ public class AppView {
 					String usedMinute = "" + token.nval;
 					accountData[accountDataIndex++] = usedMinute;
 				}
-				continue;
 			}
 		}
 		stream.close();
