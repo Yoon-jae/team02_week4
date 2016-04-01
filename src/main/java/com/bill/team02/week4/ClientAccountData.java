@@ -2,6 +2,7 @@ package com.bill.team02.week4;
 
 public class ClientAccountData {
 
+<<<<<<< HEAD
 	private Plan plan;
 	private Line[] arrayLine;
 	private String hostName;
@@ -56,5 +57,4 @@ public class ClientAccountData {
 			throw new IllegalArgumentException("No such plan");
 		}
 	}
-
 }
