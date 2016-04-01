@@ -7,16 +7,16 @@ public class ClientAccountData {
 	private String hostName;
 	private String emailAddress;
 	
-	private static final int NUMBEROFLINEINDEXZERO = 0;
-	private static final int NUMBEROFLINEINDEXONE = 1;
-	private static final int NUMBEROFLINEINDEXTWO = 2;
+	private static final int NUMBER_OF_LINE_INDEX_ZERO = 0;
+	private static final int NUMBER_OF_LINE_INDEX_ONE = 1;
+	private static final int NUMBER_OF_LINE_INDEX_TWO = 2;
 
-	public ClientAccountData(String[] accountData) {
-		this.checkAndSetPlan(accountData[accountData.length - one]);
-		arrayLine = new Line[Integer.parseInt(accountData[accountData.length - two])];
-		for (int i = 0; i < accountData.length - two; i++) {
-			int newIndex = i / two;
-			if (i % two == zero) {
+	public ClientAccountData(String[] accountData){
+		this.checkAndSetPlan(accountData[accountData.length-NUMBER_OF_LINE_INDEX_ONE]);
+		arrayLine = new Line[Integer.parseInt(accountData[accountData.length-NUMBER_OF_LINE_INDEX_TWO])];
+		for(int i=0; i<accountData.length-NUMBER_OF_LINE_INDEX_TWO; i++){
+			int newIndex = i/NUMBER_OF_LINE_INDEX_TWO;
+			if(i%NUMBER_OF_LINE_INDEX_TWO == NUMBER_OF_LINE_INDEX_ZERO) {
 				arrayLine[newIndex] = new Line(accountData[i]);
 			} else {
 				arrayLine[newIndex].setUsedMinutes(Double.parseDouble(accountData[i]));
@@ -38,19 +38,6 @@ public class ClientAccountData {
 
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
-	}
-
-	public ClientAccountData(String[] accountData){
-		this.checkAndSetPlan(accountData[accountData.length-NUMBEROFLINEINDEXONE]);
-		arrayLine = new Line[Integer.parseInt(accountData[accountData.length-NUMBEROFLINEINDEXTWO])];
-		for(int i=0; i<accountData.length-NUMBEROFLINEINDEXTWO; i++){
-			int newIndex = i/NUMBEROFLINEINDEXTWO;
-			if(i%NUMBEROFLINEINDEXTWO == NUMBEROFLINEINDEXZERO) {
-				arrayLine[newIndex] = new Line(accountData[i]);
-			} else {
-				arrayLine[newIndex].setUsedMinutes(Double.parseDouble(accountData[i]));
-			}
-		}
 	}
 
 	public double calculateRate(){
