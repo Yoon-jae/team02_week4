@@ -6,10 +6,10 @@ public class ClientAccountData{
 	private Line[] arrayLine;
 	private String hostName;
 	private String emailAddress;
-
-	private final static int zero = 0;
-	private final static int one = 1;
-	private final static int two = 2;
+	
+	private static final int NUMBEROFLINEINDEXZERO = 0;
+	private static final int NUMBEROFLINEINDEXONE = 1;
+	private static final int NUMBEROFLINEINDEXTWO = 2;
 
 	public String getHostName(){
 		return hostName;
@@ -28,11 +28,11 @@ public class ClientAccountData{
 	}
 
 	public ClientAccountData(String[] accountData){
-		this.checkAndSetPlan(accountData[accountData.length-one]);
-		arrayLine = new Line[Integer.parseInt(accountData[accountData.length-two])];
-		for(int i=0; i<accountData.length-two; i++){
-			int newIndex = i/two;
-			if(i%two == zero) {
+		this.checkAndSetPlan(accountData[accountData.length-NUMBEROFLINEINDEXONE]);
+		arrayLine = new Line[Integer.parseInt(accountData[accountData.length-NUMBEROFLINEINDEXTWO])];
+		for(int i=0; i<accountData.length-NUMBEROFLINEINDEXTWO; i++){
+			int newIndex = i/NUMBEROFLINEINDEXTWO;
+			if(i%NUMBEROFLINEINDEXTWO == NUMBEROFLINEINDEXZERO) {
 				arrayLine[newIndex] = new Line(accountData[i]);
 			} else {
 				arrayLine[newIndex].setUsedMinutes(Double.parseDouble(accountData[i]));
@@ -53,7 +53,8 @@ public class ClientAccountData{
 		} else if(plan.equals("Silver")){
 			this.plan = new Silver();
 		} else{
-			System.err.println("There isn't such plan");
+			throw new IllegalArgumentException("No such plan"); 
+			//logger.log(Level.SEVERE, null, ex);
 		}
 	}
 
