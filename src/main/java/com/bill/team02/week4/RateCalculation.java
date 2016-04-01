@@ -2,6 +2,7 @@ package com.bill.team02.week4;
 
 public class RateCalculation {
 
+	private static final int RATE_OF_FAMILIY_DISCOUNT = 5;
 	private static final int NUMBER_OF_APPLIED_DISCOUNT_USER = 3;
 	private static final int NUMBER_OF_NOT_APPLIED_DISCOUNT_USER = 2;
 	private static final int THE_MAIN_USER = 1;
@@ -19,7 +20,7 @@ public class RateCalculation {
 		if (aNumberOfLine < BORDER_OF_FAMILIY_DISCOUNT) {
 			return plan.getAdditionalLineRate() * (aNumberOfLine - THE_MAIN_USER);
 		} else {
-			return (plan.getAdditionalLineRate() * NUMBER_OF_NOT_APPLIED_DISCOUNT_USER) + ((aNumberOfLine - NUMBER_OF_APPLIED_DISCOUNT_USER) * 5);
+			return (plan.getAdditionalLineRate() * NUMBER_OF_NOT_APPLIED_DISCOUNT_USER) + ((aNumberOfLine - NUMBER_OF_APPLIED_DISCOUNT_USER) * RATE_OF_FAMILIY_DISCOUNT);
 		}
 	}
 
