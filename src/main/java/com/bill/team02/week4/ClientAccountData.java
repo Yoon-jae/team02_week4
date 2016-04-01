@@ -57,7 +57,7 @@ public class ClientAccountData {
         } else if ("Silver".equals(plan)) {
             this.plan = new Silver();
         } else {
-            System.err.println("There isn't such plan");
+            throw new IllegalArgumentException("There isn't such plan");
         }
     }
 
