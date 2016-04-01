@@ -16,10 +16,9 @@ public class AppController {
         try {
             accountData = this.appView.scanFile();
         } catch (IOException e) {
-            throw new IllegalArgumentException("No such plan");
+            ;
         }
         formController = new FormController(accountData);
         formController.printClientBill();
-        ;
     }
 }

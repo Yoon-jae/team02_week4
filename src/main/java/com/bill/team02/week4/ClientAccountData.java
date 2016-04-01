@@ -7,9 +7,9 @@ public class ClientAccountData {
     private String hostName;
     private String emailAddress;
 
-    private final static int NUMBER_OF_LINE_INDEX_ZERO = 0;
-    private final static int NUMBER_OF_LINE_INDEX_ONE = 1;
-    private final static int NUMBER_OF_LINE_INDEX_TWO = 2;
+    private static final int NUMBER_OF_LINE_INDEX_ZERO = 0;
+    private static final int NUMBER_OF_LINE_INDEX_ONE = 1;
+    private static final int NUMBER_OF_LINE_INDEX_TWO = 2;
 
     public ClientAccountData(String[] accountData) {
         this.checkAndSetPlan(accountData[accountData.length - NUMBER_OF_LINE_INDEX_ONE]);
