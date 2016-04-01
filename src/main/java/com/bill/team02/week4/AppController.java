@@ -16,7 +16,7 @@ public class AppController {
 		try {
 			accountData = this.appView.scanFile();
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("There is no input file.");
 		}
 		formController = new FormController(accountData);
 		System.out.println(formController);

@@ -1,0 +1,6 @@
+Gold
+4
+Cho 100
+Jegal 200
+Sang 300
+Kim 405
