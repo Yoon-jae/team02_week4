@@ -1,14 +1,11 @@
 package com.bill.team02.week4;
 
-//import java.util.logging.Level;
 import java.util.logging.Logger;
-//import java.util.logging.SimpleFormatter;
-//import java.util.logging.StreamHandler;
 
 public class FormController {
     private ClientAccountData clientAccountData;
     private StringBuilder builder;
-    private static final Logger logger = Logger.getLogger("PrintFormat");
+    private static final Logger LOGGER = Logger.getLogger("PrintFormat");
 
     public FormController(String[] accountData) {
         clientAccountData = new ClientAccountData(accountData);
@@ -16,9 +13,6 @@ public class FormController {
     }
 
     public void printClientBill() {
-        //logger.setUseParentHandlers(false);
-        //logger.addHandler(new StreamHandler(System.out, new SimpleFormatter()));
-        
         makeOutline();
         builder.append("               Here is your Bill\n");
         makeBorderLine();
@@ -36,7 +30,7 @@ public class FormController {
         builder.append("Your total account rate         : $" + clientAccountData.calculateRate() + "\n");
         makeOutline();
 
-        logger.info(builder+"");
+        LOGGER.info(builder+"");
     }
 
     private void makeOutline() {
