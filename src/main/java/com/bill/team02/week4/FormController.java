@@ -16,7 +16,6 @@ public class FormController {
     }
 
     public void printClientBill() {
-
         logger.setUseParentHandlers(false);
         logger.addHandler(new StreamHandler(System.out, new SimpleFormatter()));
         
@@ -37,7 +36,6 @@ public class FormController {
         builder.append("Your total account rate         : $" + clientAccountData.calculateRate() + "\n");
         makeOutline();
 
-        System.out.println(builder);
         logger.log(Level.INFO, builder+"");
     }
 
