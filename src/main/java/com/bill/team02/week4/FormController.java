@@ -23,7 +23,7 @@ public class FormController {
         builder.append("               Here is your Bill\n");
         makeBorderLine();
         builder.append("              < Your Information >\n");
-        builder.append("Your Plan           : " + clientAccountData.getPlan().getPlanName() + "\n");
+        builder.append("Your Plan                       : " + clientAccountData.getPlan().getPlanName() + "\n");
         builder.append("Number of your member           : " + clientAccountData.getArrayLine().length + "\n");
         builder.append("Your total used minutes         : " + clientAccountData.getTotalMinutes() + "\n");
         makeBorderLine();

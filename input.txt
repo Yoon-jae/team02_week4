@@ -1,7 +1,6 @@
 Gold
-5
-Cho 521
-Jegal 00
-a 0
-b 0
-c 0
+4
+Cho-yoon-jae 500
+Jegal-su-min 300
+Jo-sang-kyung 70
+Kim-geun-young 8
