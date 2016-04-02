@@ -9,7 +9,7 @@ public class AppController {
 
     private AppView appView;
     private FormController formController;
-    private static Logger logger = Logger.getLogger("My Logger");
+    private static final Logger logger = Logger.getLogger("Err logger");
 
     public AppController() {
         this.appView = new AppView();
