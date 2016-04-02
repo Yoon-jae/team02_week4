@@ -1,6 +1,7 @@
 package com.bill.team02.week4;
 
 public class FormController {
+
     private ClientAccountData clientAccountData;
     private StringBuffer buf;
 
