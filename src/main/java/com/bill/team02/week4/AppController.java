@@ -1,22 +1,29 @@
 package com.bill.team02.week4;
 
-import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+import java.util.logging.StreamHandler;
 
 public class AppController {
 
     private AppView appView;
     private FormController formController;
+    private static Logger logger = Logger.getLogger("My Logger");
 
     public AppController() {
         this.appView = new AppView();
     }
 
-    public void run() throws IORuntimeException {
+    public void run() {
+        
+        logger.setUseParentHandlers(false);
+        logger.addHandler(new StreamHandler(System.err, new SimpleFormatter()));
         String[] accountData = null;
         try {
             accountData = this.appView.scanFile();
-        } catch (IOException e) {
-            throw new IORuntimeException("Scan failed");
+        } catch (Exception e) {
+              logger.log(Level.INFO, "Scan failed", e);
         }
         formController = new FormController(accountData);
         formController.printClientBill();
