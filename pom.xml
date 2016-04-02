@@ -13,7 +13,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -23,3 +23,26 @@
     </dependency>
   </dependencies>
 </project>
+
+<plugins>
+  <plugin>
+      <artifactID>maven-compiler-plugin</artifactID>
+      <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+      </configuration>
+  </plugin>
+  <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactID>jacoco-maven-plugin</artifactID>
+      <version>0.7.6.201602180812</version>
+      <executions>
+          <execution>
+              <id>default-prepare-agent</id>
+              <goals>
+                  <goal>prepare-agent</goal>
+              </goals>
+          </execution>
+      </executions>
+  </plugin>
+</plugins>
