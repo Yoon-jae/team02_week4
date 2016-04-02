@@ -16,7 +16,7 @@ public class AppController {
         try {
             accountData = this.appView.scanFile();
         } catch (IOException e) {
-            ;
+            throw new RuntimeException(e);
         }
         formController = new FormController(accountData);
         formController.printClientBill();

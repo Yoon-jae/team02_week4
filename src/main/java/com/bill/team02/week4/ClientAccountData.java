@@ -2,6 +2,7 @@ package com.bill.team02.week4;
 
 public class ClientAccountData {
 
+    private static final int BOUND_OF_FAMILY_DISCOUNT = 4;
     private Plan plan;
     private Line[] arrayLine;
     private String hostName;
@@ -91,10 +92,9 @@ public class ClientAccountData {
     }
 
     public String checkFamilyDiscountAndPrint() {
-        if(arrayLine.length<4){
+        if (arrayLine.length < BOUND_OF_FAMILY_DISCOUNT) {
             return "* You cannot get family discount. *";
-        }
-        else{
+        } else {
             return "* You got family discount. *";
         }
     }
