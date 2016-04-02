@@ -11,12 +11,12 @@ public class AppController {
         this.appView = new AppView();
     }
 
-    public void run() {
+    public void run() throws IORuntimeException {
         String[] accountData = null;
         try {
             accountData = this.appView.scanFile();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new IORuntimeException("Scan failed");
         }
         formController = new FormController(accountData);
         formController.printClientBill();
