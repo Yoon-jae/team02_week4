@@ -3,7 +3,7 @@
 * About Project
 
  이 프로젝트는 전화요금을 계산해주는 프로그램입니다. </br>
- 당신이 사용하는 요금 Plan과, 사용하는 Line의 개수, 그리고 각 Line 사용자의 이름과 통화사용량을 input_PersonalInfo.txt에 다음과 같이 입력 해주시면  고지서 내용이 Console에 출력됩니다.
+ 당신이 사용하는 요금 Plan과, 사용하는 Line의 개수, 그리고 각 Line사용자의 이름과 통화 사용량을 프로젝트 디렉토리 최상위에 있는 input_PersonalInfo.txt에 다음과 같이 입력 해주시면, 데이터가 파싱되어 요금이 계산되고, 고지서가 Console에 출력됩니다.
 
 * input_PersonalInfo.txt 포맷</br>
 PlanName                -> Gold / Silver (정확하게 써주셔야 합니다)</br>

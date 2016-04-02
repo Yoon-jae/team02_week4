@@ -3,6 +3,7 @@ package com.bill.team02.week4;
 import java.util.logging.Logger;
 
 public class FormController {
+
     private ClientAccountData clientAccountData;
     private StringBuilder builder;
     private static final Logger LOGGER = Logger.getLogger("PrintFormat");
@@ -19,7 +20,12 @@ public class FormController {
         builder.append("              < Your Information >\n");
         builder.append("Your Plan                       : " + clientAccountData.getPlan().getPlanName() + "\n");
         builder.append("Number of your member           : " + clientAccountData.getArrayLine().length + "\n");
-        builder.append("Your total used minutes         : " + clientAccountData.getTotalMinutes() + "\n");
+        builder.append("\nEach line information\n");
+        Line[] clientLineInfo = clientAccountData.getArrayLine();
+        for(int i=0; i<clientLineInfo.length; i++){
+            builder.append("        "+(i+1) + ". " + clientLineInfo[i].getLineUserName() + " (" + clientLineInfo[i].getUsedMinutes() + " min)\n");
+        }
+        builder.append("\nYour total used minutes         : " + clientAccountData.getTotalMinutes() + " min\n");
         makeBorderLine();
         builder.append("           < Rate for used minutes >\n");
         builder.append("Your basic monthly rate         : $" + clientAccountData.getBasicMonthlyRate() + "\n");
