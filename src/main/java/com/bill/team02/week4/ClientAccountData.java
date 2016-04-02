@@ -9,7 +9,6 @@ public class ClientAccountData {
     private double basicMonthlyRate;
     private double additionalLineRate;
     private double additionalMinuteRate;
-    
 
     private static final int NUMBER_OF_LINE_INDEX_ZERO = 0;
     private static final int NUMBER_OF_LINE_INDEX_ONE = 1;
@@ -45,10 +44,34 @@ public class ClientAccountData {
     }
 
     public double calculateRate() {
-        basicMonthlyRate = RateCalculation.getBasicMonthlyRate(plan);
-        additionalLineRate = RateCalculation.getAdditionalLineRate(plan, arrayLine.length);
-        additionalMinuteRate = RateCalculation.getAdditionalMinuteRate(plan, arrayLine);
         return RateCalculation.getTotalRate(basicMonthlyRate, additionalLineRate, additionalMinuteRate);
+    }
+
+    public double getBasicMonthlyRate() {
+        basicMonthlyRate = RateCalculation.getBasicMonthlyRate(plan);
+        return basicMonthlyRate;
+    }
+
+    public double getAdditionalLineRate() {
+        additionalLineRate = RateCalculation.getAdditionalLineRate(plan, arrayLine.length);
+        return additionalLineRate;
+    }
+
+    public double getAdditionalMinuteRate() {
+        additionalMinuteRate = RateCalculation.getAdditionalMinuteRate(plan, arrayLine);
+        return additionalMinuteRate;
+    }
+
+    public static int getNumberOfLineIndexZero() {
+        return NUMBER_OF_LINE_INDEX_ZERO;
+    }
+
+    public static int getNumberOfLineIndexOne() {
+        return NUMBER_OF_LINE_INDEX_ONE;
+    }
+
+    public static int getNumberOfLineIndexTwo() {
+        return NUMBER_OF_LINE_INDEX_TWO;
     }
 
     public Plan getPlan() {
@@ -65,6 +88,15 @@ public class ClientAccountData {
             totalMinutes += arrayLine[i].getUsedMinutes();
         }
         return totalMinutes;
+    }
+
+    public String checkFamilyDiscountAndPrint() {
+        if(arrayLine.length<4){
+            return "* You cannot get family discount. *";
+        }
+        else{
+            return "* You got family discount. *";
+        }
     }
 
     private void checkAndSetPlan(String plan) {
