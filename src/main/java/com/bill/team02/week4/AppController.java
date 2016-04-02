@@ -2,9 +2,6 @@ package com.bill.team02.week4;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
-import java.util.logging.StreamHandler;
-
 public class AppController {
 
     private AppView appView;
@@ -17,8 +14,6 @@ public class AppController {
 
     public void run() {
         
-        LOGGER.setUseParentHandlers(false);
-        LOGGER.addHandler(new StreamHandler(System.err, new SimpleFormatter()));
         String[] accountData = null;
         try {
             accountData = this.appView.scanFile();
