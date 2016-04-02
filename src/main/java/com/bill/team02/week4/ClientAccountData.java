@@ -92,10 +92,11 @@ public class ClientAccountData {
     }
 
     public String checkFamilyDiscountAndPrint() {
-        if (arrayLine.length < BOUND_OF_FAMILY_DISCOUNT) {
-            return "* You cannot get family discount. *";
+        int numOfLines = arrayLine.length; 
+        if (numOfLines < BOUND_OF_FAMILY_DISCOUNT) {
+            return "\n*         You cannot get family discount.         *";
         } else {
-            return "* You got family discount. *";
+            return "\n*         You've got family discount.         *";
         }
     }
 

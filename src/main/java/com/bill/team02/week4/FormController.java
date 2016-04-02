@@ -31,7 +31,7 @@ public class FormController {
         builder.append("Your basic monthly rate         : $" + clientAccountData.getBasicMonthlyRate() + "\n");
         builder.append("Your additional line rate       : $" + clientAccountData.getAdditionalLineRate() + "\n");
         builder.append("Your additional minute rate     : $" + clientAccountData.getAdditionalMinuteRate() + "\n");
-        builder.append("          " + clientAccountData.checkFamilyDiscountAndPrint() + "\n");
+        builder.append(clientAccountData.checkFamilyDiscountAndPrint() + "\n");
         makeBorderLine();
         builder.append("Your total account rate         : $" + clientAccountData.calculateRate() + "\n");
         makeOutline();
@@ -40,10 +40,10 @@ public class FormController {
     }
 
     private void makeOutline() {
-        builder.append("\n=================================================\n");
+        builder.append("\n===============================================\n");
     }
 
     private void makeBorderLine() {
-        builder.append("-------------------------------------------------\n");
+        builder.append("-----------------------------------------------\n");
     }
 }
