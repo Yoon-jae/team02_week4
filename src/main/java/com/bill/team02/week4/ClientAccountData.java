@@ -6,6 +6,10 @@ public class ClientAccountData {
     private Line[] arrayLine;
     private String hostName;
     private String emailAddress;
+    private double basicMonthlyRate;
+    private double additionalLineRate;
+    private double additionalMinuteRate;
+    
 
     private static final int NUMBER_OF_LINE_INDEX_ZERO = 0;
     private static final int NUMBER_OF_LINE_INDEX_ONE = 1;
@@ -41,14 +45,26 @@ public class ClientAccountData {
     }
 
     public double calculateRate() {
-        double basicMonthlyRate = RateCalculation.getBasicMonthlyRate(plan);
-        double additionalLineRate = RateCalculation.getAdditionalLineRate(plan, arrayLine.length);
-        double additionalMinuteRate = RateCalculation.getAdditionalMinuteRate(plan, arrayLine);
+        basicMonthlyRate = RateCalculation.getBasicMonthlyRate(plan);
+        additionalLineRate = RateCalculation.getAdditionalLineRate(plan, arrayLine.length);
+        additionalMinuteRate = RateCalculation.getAdditionalMinuteRate(plan, arrayLine);
         return RateCalculation.getTotalRate(basicMonthlyRate, additionalLineRate, additionalMinuteRate);
     }
 
     public Plan getPlan() {
         return plan;
+    }
+
+    public Line[] getArrayLine() {
+        return arrayLine;
+    }
+
+    public double getTotalMinutes() {
+        double totalMinutes = 0;
+        for (int i = 0; i < arrayLine.length; i++) {
+            totalMinutes += arrayLine[i].getUsedMinutes();
+        }
+        return totalMinutes;
     }
 
     private void checkAndSetPlan(String plan) {
