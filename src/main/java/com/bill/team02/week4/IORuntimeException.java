@@ -2,12 +2,12 @@ package com.bill.team02.week4;
 
 @SuppressWarnings("serial")
 public class IORuntimeException extends Exception {
-    private final int ERRCODE;
+    private final int errCode;
     private static final int DEFAULTERR = 100;
     
-    IORuntimeException(String msg, int errCode) {
+    IORuntimeException(String msg, int perrCode) {
         super(msg);
-        ERRCODE = errCode;
+        errCode = perrCode;
     }
 
     IORuntimeException(String msg) {
@@ -15,6 +15,6 @@ public class IORuntimeException extends Exception {
     }
 
     public int getErrCode() {
-        return ERRCODE;
+        return errCode;
     }
 }

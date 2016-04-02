@@ -13,9 +13,9 @@ public class AppController {
 
     public void run() throws IORuntimeException {
         String[] accountData = null;
-        try {
+        try  {
             accountData = this.appView.scanFile();
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new IORuntimeException("Scan failed");
         }
         formController = new FormController(accountData);
