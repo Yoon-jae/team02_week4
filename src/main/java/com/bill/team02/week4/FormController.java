@@ -40,7 +40,7 @@ public class FormController {
     }
 
     private void makeOutline() {
-        builder.append("=================================================\n");
+        builder.append("\n=================================================\n");
     }
 
     private void makeBorderLine() {

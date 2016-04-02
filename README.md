@@ -7,9 +7,9 @@
 input_PersonalInfo.txt에 다음과 같이 입력 해주시면  고지서 내용이 Console에 출력됩니다.
 
 <input_PersonalInfo.txt 포맷>
-PlanName    -> Gold / Silver (정확하게 써주셔야 합니다)
-NumberOfLines   -> Line의 개수를 숫자로 써주시면 됩니다.
-UserName UsedMinutes
+PlanName                -> Gold / Silver (정확하게 써주셔야 합니다)
+NumberOfLines           -> Line의 개수를 숫자로 써주시면 됩니다.
+UserName UsedMinutes    -> UserName은 ','와 공백을 허용하지 않습니다.
 UserName UsedMinutes
 UserName UsedMinutes
 UserName UsedMinutes
@@ -18,10 +18,11 @@ UserName UsedMinutes
 <input_PersonalInfo.txt 예시> 
 Gold
 4
-Cho,Yoon-jae 500
-Jegal,Su-min 300
-Jo,Sang-kyung 70
-Kim,geun-young 8
+Cho-Yoon-jae 500
+Jegal-Su-min 300
+Jo-Sang-kyung 70
+Kim-geun-young 8
+
 
 * Team Members
 201202154 조윤재
