@@ -18,9 +18,9 @@ public class RateCalculation {
 
     public static double getAdditionalLineRate(Plan plan, int aNumberOfLine) {
         if (aNumberOfLine < BORDER_OF_FAMILIY_DISCOUNT) {
-            return plan.getAdditionalLineRate() * (aNumberOfLine - THE_MAIN_USER);
+            return plan.getAdditionLineRate() * (aNumberOfLine - THE_MAIN_USER);
         } else {
-            return (plan.getAdditionalLineRate() * NUMBER_OF_NOT_APPLIED_DISCOUNT_USER)
+            return (plan.getAdditionLineRate() * NUMBER_OF_NOT_APPLIED_DISCOUNT_USER)
                     + ((aNumberOfLine - NUMBER_OF_APPLIED_DISCOUNT_USER) * RATE_OF_FAMILIY_DISCOUNT);
         }
     }
