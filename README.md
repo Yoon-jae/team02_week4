@@ -2,29 +2,29 @@
 
 * About Project
 
-이 프로젝트는 전화요금을 계산해주는 프로그램입니다.
-당신이 사용하는 요금 Plan과, 사용하는 Line의 개수, 그리고 각 Line 사용자의 이름과 통화사용량을
-input_PersonalInfo.txt에 다음과 같이 입력 해주시면  고지서 내용이 Console에 출력됩니다.
+이 프로젝트는 전화요금을 계산해주는 프로그램입니다. </br>
+당신이 사용하는 요금 Plan과, 사용하는 Line의 개수, 그리고 각 Line 사용자의 이름과 통화사용량을 input_PersonalInfo.txt에 다음과 같이 입력 해주시면  고지서 내용이 Console에 출력됩니다.
 
-<input_PersonalInfo.txt 포맷>
-PlanName    -> Gold / Silver (정확하게 써주셔야 합니다)
-NumberOfLines   -> Line의 개수를 숫자로 써주시면 됩니다.
-UserName UsedMinutes
-UserName UsedMinutes
-UserName UsedMinutes
-UserName UsedMinutes
-..
+* input_PersonalInfo.txt 포맷</br>
+PlanName                -> Gold / Silver (정확하게 써주셔야 합니다)</br>
+NumberOfLines           -> Line의 개수를 숫자로 써주시면 됩니다.</br>
+UserName UsedMinutes    -> UserName은 공백대신 '-'를 사용하시면 됩니다.</br>
+UserName UsedMinutes</br>
+UserName UsedMinutes</br>
+UserName UsedMinutes</br>
+..</br>
 
-<input_PersonalInfo.txt 예시> 
-Gold
-4
-Cho,Yoon-jae 500
-Jegal,Su-min 300
-Jo,Sang-kyung 70
-Kim,geun-young 8
+* input_PersonalInfo.txt 예시</br>
+Gold</br>
+4</br>
+Cho-Yoon-jae 500</br>
+Jegal-Su-min 300</br>
+Jo-Sang-kyung 70</br>
+Kim-geun-young 8</br>
+
 
 * Team Members
-201202154 조윤재
-201201419 김근영
-201102513 조상경
-201202287 제갈수민
+201202154 조윤재</br>
+201201419 김근영</br>
+201102513 조상경</br>
+201202287 제갈수민</br>
