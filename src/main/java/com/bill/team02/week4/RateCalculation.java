@@ -42,5 +42,4 @@ public class RateCalculation {
             double additionalMinuterRate) {
         return basicMonthlyRate + additionalLineRate + additionalMinuterRate;
     }
-
 }
