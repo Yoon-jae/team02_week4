@@ -18,7 +18,7 @@ public class AppView {
 
     public String[] scanFile() throws IOException {
 
-        FileInputStream stream = new FileInputStream("input2.txt");
+        FileInputStream stream = new FileInputStream("input.txt");
         InputStreamReader reader = new InputStreamReader(stream);
         StreamTokenizer token = new StreamTokenizer(reader);
 

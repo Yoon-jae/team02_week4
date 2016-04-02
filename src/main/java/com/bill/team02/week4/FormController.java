@@ -3,7 +3,7 @@ package com.bill.team02.week4;
 public class FormController {
     private ClientAccountData clientAccountData;
     private StringBuilder builder;
-
+    
     public FormController(String[] accountData) {
         clientAccountData = new ClientAccountData(accountData);
         builder = new StringBuilder();
@@ -14,7 +14,7 @@ public class FormController {
         builder.append("               Here is your Bill\n");
         makeBorderLine();
         builder.append("              < Your Information >\n");
-        builder.append("Your Plan           : " + clientAccountData.getPlan().getPlanName() + "\n");
+        builder.append("Your Plan                       : " + clientAccountData.getPlan().getPlanName() + "\n");
         builder.append("Number of your member           : " + clientAccountData.getArrayLine().length + "\n");
         builder.append("Your total used minutes         : " + clientAccountData.getTotalMinutes() + "\n");
         makeBorderLine();
