@@ -37,7 +37,7 @@ public class AppView {
             }
             if (token.ttype == StreamTokenizer.TT_WORD) {
                 if (token.lineno() == LINE_NUMBER_ONE) {
-                    planName = token.sval;
+                    planName = token.sval.toLowerCase();
                 } else {
                     String lineUserName = token.sval;
                     accountData[accountDataIndex++] = lineUserName;

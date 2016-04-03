@@ -101,9 +101,9 @@ public class ClientAccountData {
     }
 
     private void checkAndSetPlan(String plan) {
-        if ("Gold".equals(plan)) {
+        if ("gold".equals(plan)) {
             this.plan = new Gold();
-        } else if ("Silver".equals(plan)) {
+        } else if ("silver".equals(plan)) {
             this.plan = new Silver();
         } else {
             throw new IllegalArgumentException("There isn't such plan");
