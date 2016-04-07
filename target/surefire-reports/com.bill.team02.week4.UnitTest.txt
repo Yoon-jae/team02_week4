@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.bill.team02.week4.AppTest
+Test set: com.bill.team02.week4.UnitTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec - in com.bill.team02.week4.AppTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.119 sec - in com.bill.team02.week4.UnitTest
