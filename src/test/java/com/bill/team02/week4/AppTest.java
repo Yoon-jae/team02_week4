@@ -30,6 +30,6 @@ public class AppTest extends TestCase {
     
     public void testApp() {
         assertTrue( true );
-        com.bill.team02.week4.Main.main(null);
+        //com.bill.team02.week4.Main.main(null);
     }
 }
