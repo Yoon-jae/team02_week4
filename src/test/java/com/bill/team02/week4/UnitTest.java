@@ -25,8 +25,9 @@ public class UnitTest {
 
     @Test
     public void runFirstFile() {
-        AppController app = new AppController();
-        app.run("input_PersonalInfo.txt");
+        /*AppController app = new AppController();
+        app.run("input_PersonalInfo.txt");*/
+        Main.main("input_PersonalInfo.txt");
     }
 
     @Test
