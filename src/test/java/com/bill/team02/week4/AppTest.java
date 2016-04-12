@@ -1,42 +1,13 @@
 package com.bill.team02.week4;
 
+import static org.junit.Assert.*;
 import java.io.IOException;
-
 import org.junit.Test;
-
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest extends TestCase {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName ) {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite() {
-        return (Test) new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     * @throws IOException 
-     */
-    
-    public void testApp() throws IOException {
-        new RateCalculationTest();
-        assertTrue( true );
-        
-    }
+public class AppTest {
     
     @Test
     public void getBasicMonthlyRateTest() {
@@ -45,12 +16,9 @@ public class AppTest extends TestCase {
 
         RateCalculation c = new RateCalculation();
 
-        if (g.getBasicRate() == c.getBasicMonthlyRate(g)) {
+        assertEquals(g.getBasicRate(), c.getBasicMonthlyRate(g),0.05);
 
-        }
-        if (s.getBasicRate() == c.getBasicMonthlyRate(s)) {
-
-        }
+        assertEquals(s.getBasicRate(), c.getBasicMonthlyRate(s),0.05);
 
     }
 
@@ -96,6 +64,12 @@ public class AppTest extends TestCase {
         c.getTotalRate(c.getBasicMonthlyRate(s), c.getAdditionalLineRate(s, aNumberOfLine), c.getAdditionalMinuteRate(s,l));
         }
     }
-
+    
+    @SuppressWarnings("static-access")
+    @Test
+    public void testApp() {
+        Main m = new Main();
+        m.main(null);
+    }
     
 }
