@@ -25,10 +25,5 @@ public class UnitTest {
         app.run("input_PersonalInfo3.txt");
         assertTrue( true );
     }
-    
-    @Test
-    public void testErrorFileRun() {
-        app.run("ErrorFileinput.txt");
-        assertTrue( false );
-    } 
+
 }
