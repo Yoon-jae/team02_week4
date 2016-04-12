@@ -10,8 +10,6 @@ public class RateCalculationTest {
         getAdditionalLineRateTest();
         getAdditionalMinuteRateTest();
         getTotalRateTest();
-        
-        s
     }
     
     @Test
