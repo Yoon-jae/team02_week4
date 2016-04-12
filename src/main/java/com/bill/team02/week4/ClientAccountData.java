@@ -5,17 +5,24 @@ public class ClientAccountData {
     private static final int BOUND_OF_FAMILY_DISCOUNT = 4;
     private Plan plan;
     private Line[] arrayLine;
+<<<<<<< HEAD
+=======
     private RateCalculation rCalculation;
+>>>>>>> caa5cafbd00a117cba650f0726a877a601eb8c35
     private double basicMonthlyRate;
     private double additionalLineRate;
     private double additionalMinuteRate;
-
+    private RateCalculation rCalc;
     private static final int NUMBER_OF_LINE_INDEX_ZERO = 0;
     private static final int NUMBER_OF_LINE_INDEX_ONE = 1;
     private static final int NUMBER_OF_LINE_INDEX_TWO = 2;
 
     public ClientAccountData(String[] accountData) {
+<<<<<<< HEAD
+        rCalc = new RateCalculation();
+=======
         rCalculation = new RateCalculation();
+>>>>>>> caa5cafbd00a117cba650f0726a877a601eb8c35
         this.checkAndSetPlan(accountData[accountData.length - NUMBER_OF_LINE_INDEX_ONE]);
         arrayLine = new Line[Integer.parseInt(accountData[accountData.length - NUMBER_OF_LINE_INDEX_TWO])];
         for (int i = 0; i < accountData.length - NUMBER_OF_LINE_INDEX_TWO; i++) {
@@ -29,21 +36,37 @@ public class ClientAccountData {
     }
 
     public double calculateRate() {
+<<<<<<< HEAD
+        return rCalc.getTotalRate(basicMonthlyRate, additionalLineRate, additionalMinuteRate);
+    }
+
+    public double getBasicMonthlyRate() {
+        basicMonthlyRate = rCalc.getBasicMonthlyRate(plan);
+=======
         return rCalculation.getTotalRate(basicMonthlyRate, additionalLineRate, additionalMinuteRate);
     }
 
     public double getBasicMonthlyRate() {
         basicMonthlyRate = rCalculation.getBasicMonthlyRate(plan);
+>>>>>>> caa5cafbd00a117cba650f0726a877a601eb8c35
         return basicMonthlyRate;
     }
 
     public double getAdditionalLineRate() {
+<<<<<<< HEAD
+        additionalLineRate = rCalc.getAdditionalLineRate(plan, arrayLine.length);
+=======
         additionalLineRate = rCalculation.getAdditionalLineRate(plan, arrayLine.length);
+>>>>>>> caa5cafbd00a117cba650f0726a877a601eb8c35
         return additionalLineRate;
     }
 
     public double getAdditionalMinuteRate() {
+<<<<<<< HEAD
+        additionalMinuteRate = rCalc.getAdditionalMinuteRate(plan, arrayLine);
+=======
         additionalMinuteRate = rCalculation.getAdditionalMinuteRate(plan, arrayLine);
+>>>>>>> caa5cafbd00a117cba650f0726a877a601eb8c35
         return additionalMinuteRate;
     }
 

@@ -9,7 +9,11 @@ public class RateCalculation {
     private static final int BORDER_OF_FAMILIY_DISCOUNT = 3;
 
     public RateCalculation() {
+<<<<<<< HEAD
+        // Intentionally empty
+=======
         // Intentionally Empty
+>>>>>>> caa5cafbd00a117cba650f0726a877a601eb8c35
     }
 
     public double getBasicMonthlyRate(Plan plan) {

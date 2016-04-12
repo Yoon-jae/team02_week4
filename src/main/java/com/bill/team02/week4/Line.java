@@ -20,5 +20,8 @@ public class Line {
     public String getLineUserName() {
         return lineUserName;
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> caa5cafbd00a117cba650f0726a877a601eb8c35
 }
