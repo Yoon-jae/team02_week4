@@ -14,8 +14,8 @@ public class UnitTest {
 
     @Test
     public void testRun() {
-        new Main();
-        new RateCalculation();
+        Main main = new Main();
+        RateCalculation rCalc = new RateCalculation();
     }
     
     @Test
