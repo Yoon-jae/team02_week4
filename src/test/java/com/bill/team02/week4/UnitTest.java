@@ -10,12 +10,36 @@ public class UnitTest {
     public void testAppController() {
         assertTrue( true );
         com.bill.team02.week4.Main.main(null);
-//        fail("Not yet implemented");
     }
 
     @Test
     public void testRun() {
-//        fail("Not yet implemented");
+        new Main();
+        new RateCalculation();
+    }
+    
+    @Test
+    public void runFirstFile() {
+        AppController app = new AppController();
+        app.run("input_PersonalInfo.txt");
+    }
+    
+    @Test
+    public void runSecondFile() {
+        AppController app = new AppController();
+        app.run("input_PersonalInfo2.txt");
+    }
+    
+    @Test
+    public void runThirdFile() {
+        AppController app = new AppController();
+        app.run("input_PersonalInfo3.txt");
+    }
+    
+    @Test
+    public void runErrorFile() {
+        AppController app = new AppController();
+        app.run("Error_fileName.txt");
     }
 
 }
