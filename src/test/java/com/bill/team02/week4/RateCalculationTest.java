@@ -5,6 +5,15 @@ import java.io.IOException;
 import org.junit.Test;
 
 public class RateCalculationTest {
+    public RateCalculationTest() throws IOException{
+        getBasicMonthlyRateTest();
+        getAdditionalLineRateTest();
+        getAdditionalMinuteRateTest();
+        getTotalRateTest();
+        
+        s
+    }
+    
     @Test
     public void getBasicMonthlyRateTest() {
         Gold g = new Gold();
