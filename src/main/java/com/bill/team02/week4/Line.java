@@ -21,8 +21,4 @@ public class Line {
         return lineUserName;
     }
 
-    public void setLineUserName(String lineUserName) {
-        this.lineUserName = lineUserName;
-    }
-
 }
