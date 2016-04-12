@@ -1,5 +1,7 @@
 package com.bill.team02.week4;
 
+import java.io.IOException;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -26,9 +28,13 @@ public class AppTest extends TestCase {
 
     /**
      * Rigourous Test :-)
+     * @throws IOException 
      */
     
-    public void testApp() {
+    public void testApp() throws IOException {
+        new RateCalculationTest();
         assertTrue( true );
+        
     }
+    
 }
