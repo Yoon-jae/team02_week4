@@ -13,12 +13,12 @@ public class AppView {
     private static final int MAX_DATA_SIZE = 1000;
 
     public AppView() {
-
+        // This is blank constructor.
     }
 
-    public String[] scanFile() throws IOException {
+    public String[] scanFile(String fileName) throws IOException {
 
-        FileInputStream stream = new FileInputStream("input_PersonalInfo.txt");
+        FileInputStream stream = new FileInputStream(fileName);
         InputStreamReader reader = new InputStreamReader(stream);
         StreamTokenizer token = new StreamTokenizer(reader);
 
@@ -42,7 +42,7 @@ public class AppView {
                     String lineUserName = token.sval;
                     accountData[accountDataIndex++] = lineUserName;
                     token.nextToken();
-                    String usedMinute = "" + token.nval;
+                    String usedMinute = Double.toString(token.nval);
                     accountData[accountDataIndex++] = usedMinute;
                 }
             }

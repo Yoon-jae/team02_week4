@@ -12,11 +12,11 @@ public class AppController {
         this.appView = new AppView();
     }
 
-    public void run() {
+    public void run(String fileName) {
         
         String[] accountData = null;
         try {
-            accountData = this.appView.scanFile();
+            accountData = this.appView.scanFile(fileName);
         } catch (Exception e) {
               LOGGER.log(Level.INFO, "Scan failed", e);
         }

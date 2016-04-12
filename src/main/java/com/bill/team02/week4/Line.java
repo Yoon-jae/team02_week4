@@ -20,9 +20,4 @@ public class Line {
     public String getLineUserName() {
         return lineUserName;
     }
-
-    public void setLineUserName(String lineUserName) {
-        this.lineUserName = lineUserName;
-    }
-
 }

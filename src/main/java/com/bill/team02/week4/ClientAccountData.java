@@ -5,17 +5,16 @@ public class ClientAccountData {
     private static final int BOUND_OF_FAMILY_DISCOUNT = 4;
     private Plan plan;
     private Line[] arrayLine;
-    private String hostName;
-    private String emailAddress;
     private double basicMonthlyRate;
     private double additionalLineRate;
     private double additionalMinuteRate;
-
+    private RateCalculation rCalc;
     private static final int NUMBER_OF_LINE_INDEX_ZERO = 0;
     private static final int NUMBER_OF_LINE_INDEX_ONE = 1;
     private static final int NUMBER_OF_LINE_INDEX_TWO = 2;
 
     public ClientAccountData(String[] accountData) {
+        rCalc = new RateCalculation();
         this.checkAndSetPlan(accountData[accountData.length - NUMBER_OF_LINE_INDEX_ONE]);
         arrayLine = new Line[Integer.parseInt(accountData[accountData.length - NUMBER_OF_LINE_INDEX_TWO])];
         for (int i = 0; i < accountData.length - NUMBER_OF_LINE_INDEX_TWO; i++) {
@@ -28,51 +27,23 @@ public class ClientAccountData {
         }
     }
 
-    public String getHostName() {
-        return hostName;
-    }
-
-    public void setHostName(String hostName) {
-        this.hostName = hostName;
-    }
-
-    public String getEmailAddress() {
-        return emailAddress;
-    }
-
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
-
     public double calculateRate() {
-        return RateCalculation.getTotalRate(basicMonthlyRate, additionalLineRate, additionalMinuteRate);
+        return rCalc.getTotalRate(basicMonthlyRate, additionalLineRate, additionalMinuteRate);
     }
 
     public double getBasicMonthlyRate() {
-        basicMonthlyRate = RateCalculation.getBasicMonthlyRate(plan);
+        basicMonthlyRate = rCalc.getBasicMonthlyRate(plan);
         return basicMonthlyRate;
     }
 
     public double getAdditionalLineRate() {
-        additionalLineRate = RateCalculation.getAdditionalLineRate(plan, arrayLine.length);
+        additionalLineRate = rCalc.getAdditionalLineRate(plan, arrayLine.length);
         return additionalLineRate;
     }
 
     public double getAdditionalMinuteRate() {
-        additionalMinuteRate = RateCalculation.getAdditionalMinuteRate(plan, arrayLine);
+        additionalMinuteRate = rCalc.getAdditionalMinuteRate(plan, arrayLine);
         return additionalMinuteRate;
-    }
-
-    public static int getNumberOfLineIndexZero() {
-        return NUMBER_OF_LINE_INDEX_ZERO;
-    }
-
-    public static int getNumberOfLineIndexOne() {
-        return NUMBER_OF_LINE_INDEX_ONE;
-    }
-
-    public static int getNumberOfLineIndexTwo() {
-        return NUMBER_OF_LINE_INDEX_TWO;
     }
 
     public Plan getPlan() {
