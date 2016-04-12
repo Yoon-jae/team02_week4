@@ -25,5 +25,11 @@ public class UnitTest {
         app.run("input_PersonalInfo3.txt");
         assertTrue( true );
     }
+    
+    @Test
+    public void testPlan() {
+        assertTrue( true );
+        com.bill.team02.week4.Main.main(null);
+    }
 
 }
