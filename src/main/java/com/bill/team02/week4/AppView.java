@@ -13,7 +13,11 @@ public class AppView {
     private static final int MAX_DATA_SIZE = 1000;
 
     public AppView() {
+<<<<<<< HEAD
         // This is blank constructor.
+=======
+        // Intentionally Empty
+>>>>>>> caa5cafbd00a117cba650f0726a877a601eb8c35
     }
 
     public String[] scanFile(String fileName) throws IOException {

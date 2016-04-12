@@ -1,5 +1,11 @@
 Silver
+<<<<<<< HEAD
 3
 Cho-yoon-jae 500
 Jegal-su-min 300
 Jo-sang-kyung 70
+=======
+2
+Cho-yoon-jae 500
+Jegal-su-min 300
+>>>>>>> caa5cafbd00a117cba650f0726a877a601eb8c35
