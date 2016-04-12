@@ -2,6 +2,10 @@ package com.bill.team02.week4;
 
 import static org.junit.Assert.*;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Modifier;
+
 import org.junit.Test;
 
 public class UnitTest {
@@ -12,9 +16,11 @@ public class UnitTest {
     }
 
     @Test
-    public void testRun() {
-        new Main();
-        Main.main(null);
+    public void testConstructorIsPrivate() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+      Constructor<Main> constructor = Main.class.getDeclaredConstructor();
+      assertTrue(Modifier.isPrivate(constructor.getModifiers()));
+      constructor.setAccessible(true);
+      constructor.newInstance();
     }
 
     @Test
