@@ -65,11 +65,10 @@ public class AppTest {
         }
     }
     
-    @SuppressWarnings("static-access")
     @Test
     public void testApp() {
-        Main m = new Main();
-        m.main(null);
+        String[] str = {""};
+        Main.main(str);
     }
     
 }
