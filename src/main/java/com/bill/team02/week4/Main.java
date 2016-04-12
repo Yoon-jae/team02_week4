@@ -6,13 +6,8 @@ public class Main {
         // This is blank constructor.
     }
 
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         AppController appController = new AppController();
         appController.run("input_PersonalInfo.txt");
-    }*/
-    
-    public static void main(String inputFile){
-        AppController appController = new AppController();
-        appController.run(inputFile);
     }
 }
