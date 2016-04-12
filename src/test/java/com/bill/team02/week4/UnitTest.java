@@ -12,6 +12,7 @@ public class UnitTest {
 
     @Test
     public void testAppController() {
+        com.bill.team02.week4.Main.main(null);
         assertTrue(true);
     }
 
