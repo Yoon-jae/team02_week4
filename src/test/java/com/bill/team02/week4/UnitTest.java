@@ -26,14 +26,4 @@ public class UnitTest {
         assertTrue( true );
     }
     
-    @Test
-    public void testPlan() {
-        Plan plan = new Plan(100.0, 1000, 200.0, 150.0, "planName");
-        assertEquals(100.0, plan.getBasicRate(),30);
-        assertEquals(1000, plan.getBasicMinute(),30);
-        assertEquals(200.0, plan.getAdditionLineRate(),30);
-        assertEquals(150.0, plan.getRatePerExcessMinute(),30);
-        assertEquals("planName", plan.getPlanName());
-    }
-    
 }
