@@ -94,17 +94,4 @@ public class AppTest {
         c.getTotalRate(c.getBasicMonthlyRate(s), c.getAdditionalLineRate(s, aNumberOfLine), c.getAdditionalMinuteRate(s,l));
         }
     }
-    
-    @Test
-    public void testPlan() {
-        Plan plan = new Plan(0, 0, 0, 100.0, null);
-        assertEquals(100.0, plan.getRatePerExcessMinute(),0);
-       
-    }
-    
-    @Test
-    public void testApp() {
-        Main.main(null);
-    }
-    
 }
