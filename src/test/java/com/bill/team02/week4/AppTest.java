@@ -95,8 +95,6 @@ public class AppTest {
         }
     }
     
-<<<<<<< HEAD
-=======
     @Test
     public void testPlan() {
         Plan plan = new Plan(0, 0, 0, 100.0, null);
@@ -109,5 +107,4 @@ public class AppTest {
         Main.main(null);
     }
     
->>>>>>> e84d23d62127e2df8f031661a3485dd782177970
 }
