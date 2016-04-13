@@ -11,16 +11,46 @@ import org.junit.Test;
 public class AppTest {
     
     @Test
-    public void getBasicMonthlyRateTest() {
+    public void getBasicMonthlyRateTest1() {
         Gold g = new Gold();
+
+        RateCalculation c = new RateCalculation();
+
+        assertEquals(c.getBasicMonthlyRate(g),g.getBasicRate() ,0.05);
+
+    }
+
+    @Test
+    public void getBasicMonthlyRateTest2() {
         Silver s = new Silver();
 
         RateCalculation c = new RateCalculation();
 
-        assertEquals(g.getBasicRate(), c.getBasicMonthlyRate(g),0.05);
         assertEquals(s.getBasicRate(), c.getBasicMonthlyRate(s),0.05);
 
     }
+
+    @Test
+    public void getBasicMonthlyRateTest3() {
+        Silver s = new Silver();
+
+        RateCalculation c = new RateCalculation();
+
+        assertEquals(s.getBasicRate(), c.getBasicMonthlyRate(s),0.05);
+
+    }
+
+    @Test
+    public void getBasicMonthlyRateTest4() {
+        Silver s = new Silver();
+
+        RateCalculation c = new RateCalculation();
+
+        assertEquals(s.getBasicRate(), c.getBasicMonthlyRate(s),0.05);
+
+    }
+
+
 
     @Test
     public void getAdditionalLineRateTest() {
@@ -65,6 +95,8 @@ public class AppTest {
         }
     }
     
+<<<<<<< HEAD
+=======
     @Test
     public void testPlan() {
         Plan plan = new Plan(0, 0, 0, 100.0, null);
@@ -77,4 +109,5 @@ public class AppTest {
         Main.main(null);
     }
     
+>>>>>>> e84d23d62127e2df8f031661a3485dd782177970
 }
