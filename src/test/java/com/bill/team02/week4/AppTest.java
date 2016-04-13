@@ -11,16 +11,46 @@ import org.junit.Test;
 public class AppTest {
     
     @Test
-    public void getBasicMonthlyRateTest() {
+    public void getBasicMonthlyRateTest1() {
         Gold g = new Gold();
+
+        RateCalculation c = new RateCalculation();
+
+        assertEquals(c.getBasicMonthlyRate(g),g.getBasicRate() ,0.05);
+
+    }
+
+    @Test
+    public void getBasicMonthlyRateTest2() {
         Silver s = new Silver();
 
         RateCalculation c = new RateCalculation();
 
-        assertEquals(g.getBasicRate(), c.getBasicMonthlyRate(g),0.05);
         assertEquals(s.getBasicRate(), c.getBasicMonthlyRate(s),0.05);
 
     }
+
+    @Test
+    public void getBasicMonthlyRateTest3() {
+        Silver s = new Silver();
+
+        RateCalculation c = new RateCalculation();
+
+        assertEquals(s.getBasicRate(), c.getBasicMonthlyRate(s),0.05);
+
+    }
+
+    @Test
+    public void getBasicMonthlyRateTest4() {
+        Silver s = new Silver();
+
+        RateCalculation c = new RateCalculation();
+
+        assertEquals(s.getBasicRate(), c.getBasicMonthlyRate(s),0.05);
+
+    }
+
+
 
     @Test
     public void getAdditionalLineRateTest() {
@@ -64,17 +94,4 @@ public class AppTest {
         c.getTotalRate(c.getBasicMonthlyRate(s), c.getAdditionalLineRate(s, aNumberOfLine), c.getAdditionalMinuteRate(s,l));
         }
     }
-    
-    @Test
-    public void testPlan() {
-        Plan plan = new Plan(0, 0, 0, 100.0, null);
-        assertEquals(100.0, plan.getRatePerExcessMinute(),0);
-       
-    }
-    
-    @Test
-    public void testApp() {
-        Main.main(null);
-    }
-    
 }
