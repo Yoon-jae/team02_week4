@@ -12,15 +12,17 @@ public class AppController {
         this.appView = new AppView();
     }
 
-    public void run(String fileName) {
+    public boolean run(String fileName) {
         
         String[] accountData = null;
         try {
             accountData = this.appView.scanFile(fileName);
         } catch (Exception e) {
               LOGGER.log(Level.INFO, "Scan failed", e);
+              return false;
         }
         formController = new FormController(accountData);
         formController.printClientBill();
+        return true;
     }
 }

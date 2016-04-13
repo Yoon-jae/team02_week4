@@ -2,6 +2,7 @@ package com.bill.team02.week4;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -9,8 +10,13 @@ import org.junit.Test;
  *
  */
 public class PlanTest {
-
-    Plan plan = new Plan(10.0, 10, 10.0, 10.0, "PlanName");
+    
+    private Plan plan;
+    
+    @Before
+    public void setUp(){
+        plan = new Plan(10.0, 10, 10.0, 10.0, "PlanName");
+    }
     
     @Test
     public void testGetBasicRate() {

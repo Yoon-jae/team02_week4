@@ -1,13 +1,16 @@
 package com.bill.team02.week4;
 
 import static org.junit.Assert.assertEquals;
-
+import org.junit.Before;
 import org.junit.Test;
 
 public class SilverTest {
+    private Silver silver;
     
-    Plan silver = new Silver();
-    
+    @Before
+    public void setup(){
+        silver = new Silver();
+    }
     @Test
     public void testBasicRate() {
         assertEquals(29.95, silver.getBasicRate(),0.05); 

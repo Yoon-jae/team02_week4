@@ -1,7 +1,6 @@
 package com.bill.team02.week4;
 
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
 
