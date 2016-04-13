@@ -38,6 +38,10 @@ public class FormController {
 
         LOGGER.info(builder+"");
     }
+    
+    public StringBuilder getBuilder(){
+        return builder;
+    }
 
     private void makeOutline() {
         builder.append("\n===============================================\n");
