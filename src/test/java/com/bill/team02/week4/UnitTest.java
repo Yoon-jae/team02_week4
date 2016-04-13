@@ -36,14 +36,4 @@ public class UnitTest {
         assertEquals("planName", plan.getPlanName());
     }
     
-    @Test
-    public void testSilver() {
-        Plan silver = new Silver();
-        assertEquals(29.95, silver.getBasicRate(),30); 
-        assertEquals(500, silver.getBasicMinute(),30); 
-        assertEquals(21.50, silver.getAdditionLineRate(),30); 
-        assertEquals(0.54, silver.getRatePerExcessMinute(),30); 
-        assertEquals("Silver", silver.getPlanName()); 
-    }
-
 }
