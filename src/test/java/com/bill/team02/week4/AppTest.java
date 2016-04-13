@@ -1,6 +1,9 @@
 package com.bill.team02.week4;
 
 import static org.junit.Assert.*;
+
+import java.io.IOException;
+
 import org.junit.Test;
 /**
  * Unit test for simple App.
