@@ -3,6 +3,7 @@ package com.bill.team02.week4;
 public class Main {
 
     public Main() {
+        // Intentionally Empty
     }
 
     public static void main(String[] args) {

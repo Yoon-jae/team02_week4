@@ -1,2 +1,0 @@
-Main-Class:com.bill.team02.week4.Main
-

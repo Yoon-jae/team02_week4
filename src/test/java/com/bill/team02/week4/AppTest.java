@@ -1,9 +1,10 @@
 package com.bill.team02.week4;
 
 import static org.junit.Assert.*;
-import java.io.IOException;
-import org.junit.Test;
 
+import java.io.IOException;
+
+import org.junit.Test;
 /**
  * Unit test for simple App.
  */
@@ -15,7 +16,7 @@ public class AppTest {
 
         RateCalculation c = new RateCalculation();
 
-        assertEquals(g.getBasicRate(), c.getBasicMonthlyRate(g),0.05);
+        assertEquals(c.getBasicMonthlyRate(g),g.getBasicRate() ,0.05);
 
     }
 
@@ -94,4 +95,19 @@ public class AppTest {
         }
     }
     
+<<<<<<< HEAD
+=======
+    @Test
+    public void testPlan() {
+        Plan plan = new Plan(0, 0, 0, 100.0, null);
+        assertEquals(100.0, plan.getRatePerExcessMinute(),0);
+       
+    }
+    
+    @Test
+    public void testApp() {
+        Main.main(null);
+    }
+    
+>>>>>>> e84d23d62127e2df8f031661a3485dd782177970
 }
