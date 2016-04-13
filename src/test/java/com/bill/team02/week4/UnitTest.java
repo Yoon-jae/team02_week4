@@ -28,7 +28,7 @@ public class UnitTest {
     
     @Test
     public void testPlan() {
-        assertTrue( true );
+        
         com.bill.team02.week4.Main.main(null);
     }
 
