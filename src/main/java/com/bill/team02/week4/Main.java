@@ -1,7 +1,5 @@
 package com.bill.team02.week4;
 
-import org.junit.Test;
-
 public class Main {
 
     public Main() {
