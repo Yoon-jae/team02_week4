@@ -29,12 +29,19 @@ public class ClientAccountDataTest {
     private static final int TOTAL_MIN_TWO = 878;
     private static final int TOTAL_MIN_THREE = 800;
 
+    private String[] ad;
+    private String[] ad2;
+    private String[] ad3;
+    private String[] ad4;
+
     @Before
     public void setUp() throws IOException {
 
-        String[] ad = new AppView().scanFile("input_PersonalInfo.txt");
-        String[] ad2 = new AppView().scanFile("input_PersonalInfo2.txt");
-        String[] ad3 = new AppView().scanFile("input_PersonalInfo3.txt");
+        ad = new AppView().scanFile("input_PersonalInfo.txt");
+        ad2 = new AppView().scanFile("input_PersonalInfo2.txt");
+        ad3 = new AppView().scanFile("input_PersonalInfo3.txt");
+        ad4 = null;
+
         cd = new ClientAccountData(ad);
         cd2 = new ClientAccountData(ad2);
         cd3 = new ClientAccountData(ad3);
@@ -172,9 +179,7 @@ public class ClientAccountDataTest {
 
     @Test
     public void checkAndSetPlanTest() throws IOException {
-        String[] ad4 = null;
         ad4 = new AppView().scanFile("input_PersonalInfo4.txt");
-
         ClientAccountData t = new ClientAccountData(ad4);
         assertEquals(null, t.getPlan());
     }
