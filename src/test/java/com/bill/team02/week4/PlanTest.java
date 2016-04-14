@@ -40,7 +40,7 @@ public class PlanTest {
 
     @Test
     public void testGetPlanName() {
-        assertEquals(12.0, plan.getBasicRate(),0.5); 
+        assertEquals("PlanName", plan.getPlanName()); 
     }
  
 }

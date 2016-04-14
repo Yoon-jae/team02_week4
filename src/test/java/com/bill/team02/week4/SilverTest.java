@@ -33,7 +33,7 @@ public class SilverTest {
     
     @Test
     public void testPlanName() {
-        assertEquals("Silver", silver.getPlanName(),0.05); 
+        assertEquals("Silver", silver.getPlanName()); 
     }
 
 }

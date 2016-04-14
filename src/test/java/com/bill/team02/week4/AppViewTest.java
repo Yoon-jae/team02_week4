@@ -6,18 +6,18 @@ import org.junit.Test;
 import org.junit.Before;
 
 public class AppViewTest {
-    private AppView av;
+    private AppView appView;
     private String[] ad;
     
     @Before
     public void setUp(){
-        av = new AppView();
+        appView = new AppView();
         //expected accountData here
     }
     
     @Test
     public void scanFileTest() throws IOException{
-        assertSame(ad,av.scanFile(""));
+        assertSame(ad,appView.scanFile(""));
     }
 
 }
