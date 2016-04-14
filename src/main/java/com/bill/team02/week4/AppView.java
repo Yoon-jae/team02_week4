@@ -33,6 +33,9 @@ public class AppView {
                     accountData[accountData.length - PLAN_IDNEX] = planName;
                     accountData[accountData.length - NUM_OF_LINE_INDEX] = String.valueOf(numOfLine);
                 }
+                else{
+                    
+                }
                 continue;
             }
             if (token.ttype == StreamTokenizer.TT_WORD) {
@@ -45,6 +48,9 @@ public class AppView {
                     String usedMinute = Double.toString(token.nval);
                     accountData[accountDataIndex++] = usedMinute;
                 }
+            }
+            else{
+                
             }
         }
         stream.close();
