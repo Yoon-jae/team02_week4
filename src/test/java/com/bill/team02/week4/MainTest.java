@@ -8,7 +8,7 @@ import java.lang.reflect.Modifier;
 import org.junit.Before;
 import org.junit.Test;
 
-public class UnitTest {
+public class MainTest {
     
     @Before
     public void testConstructorIsPrivate() throws Exception {
