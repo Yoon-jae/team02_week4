@@ -1,21 +1,22 @@
 package com.bill.team02.week4;
 
 import static org.junit.Assert.*;
-
+/*
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 
 import org.junit.Before;
+*/
 import org.junit.Test;
-
+/*
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+*/
 public class MainTest {
 
-    private static final Logger LOGGER = Logger.getLogger("Err logger");
-    
+    //private static final Logger LOGGER = Logger.getLogger("Err logger");
+    /*
     @Before
     public void testConstructorIsPrivate() {
         Constructor<Main> constructor = null;
@@ -40,7 +41,7 @@ public class MainTest {
             LOGGER.log(Level.INFO, "InvocationTargetException", e);
         }
     }
-
+*/
     @Test
     public void testAppController() {
         Main.main(null);
