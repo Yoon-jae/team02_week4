@@ -14,13 +14,13 @@ public class AppViewTest {
 
     private static final int NUMBER_OF_LINE_ZERO = 0;
     private static final int NUMBER_OF_LINE_TEN = 10;
-    private static final int NUMBER_OF_LINE_FOUR = 4;
+    private static final int NUMBER_OF_LINE_SIX = 6;
 
     @Before
     public void setUp() throws IOException {
         appView = new AppView();
         ad = new String[NUMBER_OF_LINE_TEN];
-        ad2 = new String[NUMBER_OF_LINE_FOUR];
+        ad2 = new String[NUMBER_OF_LINE_SIX];
         ad[0] = "Cho-yoon-jae";
         ad[1] = "500.0";
         ad[2] = "Jegal-su-min";
@@ -39,7 +39,7 @@ public class AppViewTest {
         ad2[3] = "300.0";
         ad2[4] = "2";
         ad2[5] = "silver";
-        adt2 = appView.scanFile("input_PersonalInfo2.txt");
+        adt2 = appView.scanFile("input_PersonalInfo3.txt");
         
     }
 
@@ -51,7 +51,7 @@ public class AppViewTest {
     }
     @Test
     public void scanFileTest2() {
-        for (int i = NUMBER_OF_LINE_ZERO; i < NUMBER_OF_LINE_FOUR; i++) {
+        for (int i = NUMBER_OF_LINE_ZERO; i < NUMBER_OF_LINE_SIX; i++) {
             assertEquals(ad2[i], adt2[i]);
         }
     }
