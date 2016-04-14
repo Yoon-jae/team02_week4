@@ -2,19 +2,14 @@ package com.bill.team02.week4;
 
 import static org.junit.Assert.*;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Modifier;
-
 import org.junit.Test;
 
 public class MainTest {
     
-    @Test
-    public void testConstructorIsPrivate(){
-        final Constructor<?>[] constructors = Main.class.getDeclaredConstructors();
-        for (Constructor<?> constructor : constructors) {
-        assertTrue(Modifier.isPrivate(constructor.getModifiers()));
-    }
+    @Test(expected=IllegalAccessException.class)
+    public void testConstructorIsPrivate() throws Exception{
+        Main.class.newInstance();
+        fail("This calss constructor should be private");
     }
 
     @Test
