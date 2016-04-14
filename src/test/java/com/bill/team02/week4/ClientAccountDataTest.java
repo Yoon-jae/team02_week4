@@ -33,15 +33,19 @@ public class ClientAccountDataTest {
     private String[] ad2;
     private String[] ad3;
     private String[] ad4;
+    
+    private AppView av;
 
     @Before
     public void setUp() throws IOException {
-
-        ad = new AppView().scanFile("input_PersonalInfo.txt");
-        ad2 = new AppView().scanFile("input_PersonalInfo2.txt");
-        ad3 = new AppView().scanFile("input_PersonalInfo3.txt");
-        ad4 = null;
-
+        
+        av = new AppView();
+        
+        ad = av.scanFile("input_PersonalInfo.txt");
+        ad2 = av.scanFile("input_PersonalInfo2.txt");
+        ad3 = av.scanFile("input_PersonalInfo3.txt");
+        ad4 = av.scanFile("input_PersonalInfo4.txt");
+        
         cd = new ClientAccountData(ad);
         cd2 = new ClientAccountData(ad2);
         cd3 = new ClientAccountData(ad3);
@@ -179,7 +183,6 @@ public class ClientAccountDataTest {
 
     @Test
     public void checkAndSetPlanTest() throws IOException {
-        ad4 = new AppView().scanFile("input_PersonalInfo4.txt");
         ClientAccountData t = new ClientAccountData(ad4);
         assertEquals(null, t.getPlan());
     }
