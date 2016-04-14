@@ -3,7 +3,7 @@ package com.bill.team02.week4;
 public class Main {
 
     private Main() {
-        // Intentionally Empty
+        throw new UnsupportedOperationException();
     }
 
     public static void main(String[] args) {
