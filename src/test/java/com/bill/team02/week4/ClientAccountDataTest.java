@@ -182,7 +182,7 @@ public class ClientAccountDataTest {
     }
 
     @Test
-    public void checkAndSetPlanTest() throws IOException {
+    public void checkAndSetPlanTest() {
         ClientAccountData t = new ClientAccountData(ad4);
         assertEquals(null, t.getPlan());
     }
