@@ -7,22 +7,20 @@ import org.junit.Test;
 import org.junit.Before;
 
 public class AppControllerTest {
-    private AppController A;
+    private AppController app;
 
     @Before
     public void setUp() {
-        A = new AppController();
+        app = new AppController();
     }
 
     @Test
     public void runTest() throws IOException {
         String[] str = { "input_PersonalInfo.txt", "input_PersonalInfo2.txt", "input_PersonalInfo3.txt" };
-        AppView av = new AppView();
         for (int i = 0; i < 3; i++) {
-            String[] ac = av.scanFile(str[i]);
-            assertEquals(true, A.run(ac[i]));
+            assertEquals(true, app.run(str[i]));
         }
-        assertEquals(false, A.run(null));
-        assertEquals(false, A.run("asdf"));
+        assertEquals(false, app.run(null));
+        assertEquals(false, app.run("asdf"));
     }
 }
