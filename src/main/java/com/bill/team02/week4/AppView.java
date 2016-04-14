@@ -32,8 +32,6 @@ public class AppView {
                     accountData = new String[(numOfLine + ADD_PAIR) * MUL_PAIR];
                     accountData[accountData.length - PLAN_IDNEX] = planName;
                     accountData[accountData.length - NUM_OF_LINE_INDEX] = String.valueOf(numOfLine);
-                } else {
-                    continue;
                 }
                 continue;
             }
